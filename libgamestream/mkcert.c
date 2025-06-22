@@ -42,7 +42,7 @@ CERT_KEY_PAIR mkcert_generate() {
     bio_err = BIO_new_fp(stderr, BIO_NOCLOSE);
 
     OpenSSL_add_all_algorithms();
-    ERR_load_crypto_strings();
+    ERR_load_CRYPTO_strings();
 
     mkcert(&x509, &pkey, NUM_BITS, SERIAL, NUM_YEARS);
 
